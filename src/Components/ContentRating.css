@@ -1,44 +1,101 @@
-/* ImageRatingComponent.css */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/tulum.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Raleway', sans-serif;
+  color: black; /* Color turquesa para el texto */
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 0px;
+  color: white;
+  font-style: italic
+}
 
 .content-rating {
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .image {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .rating-buttons {
-    margin-top: 10px;
-  }
-  
-  .like-button,
-  .dislike-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-  
-  .like-button:hover,
-  .dislike-button:hover {
-    background-color: #2980b9;
-  }
-  
-  #reactInfo{
-    max-width: 400px;
-    text-align: justify;
-  }
+  @apply bg-white p-6 rounded-lg shadow-lg text-center;
+  max-width: 90%; /* Ajusta el ancho máximo del contenedor */
+  width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: justify;
+  font-size: medium;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  font-size: small;
+}
+
+.padre {
+  max-width: 93%; /* Ajusta el ancho máximo del contenedor */
+  width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 0px;
+  text-align: center;
+  font-size: medium;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row; /* Asegura la alineación horizontal */
+  align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+  justify-content: flex-start; /* Alinea los elementos al inicio horizontalmente */
+
+}
+
+.input, .question {
+  @apply bg-white p-6 rounded-lg shadow-lg text-center;
+  max-width: 90%; /* Ajusta el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 10px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-size: small;
+  padding-top: 5px;
+}
+
+.image {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.rating-buttons {
+  margin-top: 10px;
+  font-size: small;
+
+}
+
+.like-button,
+.dislike-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s;
+  font-size: x-small;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  background-color: #2980b9;
+  font-size: x-small;
+}
+
+#reactInfo {
+  max-width: 400px;
+  text-align: justify;
+}
